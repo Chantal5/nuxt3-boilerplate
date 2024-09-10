@@ -1,0 +1,93 @@
+//Theme fallback
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --primary: #555;
+  --primary-bright: #777;
+}
+
+//Fonts
+$font-default: 'Open Sans', sans-serif;
+
+//Colors
+//Theme colors
+.theme {
+  &--pink {
+    --primary: #CC2D6F; 
+    --primary-bright: #ff3388; 
+  }
+}
+
+//Screenreader only: hide visually
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+ }
+
+//Set Nuxt container
+#__nuxt {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  header {
+    padding: .5rem 2rem;
+
+    nav {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: .5rem;
+
+          a {
+            //Theming example (pink theme is applied on about-page, navigation links are pink there)
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    align-self: end;
+    padding: .5rem 2rem;
+  }
+}
+
+//Set defaults
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+//Page elements
+.page {
+  padding: 1rem 2rem;
+}
+
+.box {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+  > * {
+    margin-bottom: 1rem;
+  }
+}
