@@ -1,0 +1,6 @@
+query Articles($first: Int!, $skip: Int!) {
+  articles {
+    title
+    description
+  }
+}

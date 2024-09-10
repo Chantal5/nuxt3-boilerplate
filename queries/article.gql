@@ -1,0 +1,6 @@
+query Blogpost($slug: String!) {
+  blogpost(where: {slug: $slug}) {
+    title
+    description
+  }
+}
