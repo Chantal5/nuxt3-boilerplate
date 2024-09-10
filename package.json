@@ -10,7 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.8.0",
     "nuxt": "^3.13.0",
+    "nuxt-graphql-request": "^8.1.1",
+    "nuxt-viewport": "^2.1.6",
+    "sass": "^1.78.0",
+    "sitemap": "^8.0.0",
     "vue": "latest",
     "vue-router": "latest"
   }
