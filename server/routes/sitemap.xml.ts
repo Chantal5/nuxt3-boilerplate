@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
   //Set urls variable and add homepage
   const urls = [
-    '/',
+    '/', '/about'
   ]
 
   for (const doc of urls) {
