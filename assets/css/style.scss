@@ -1,8 +1,12 @@
 //Theme fallback
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  --primary: #555;
-  --primary-bright: #777;
+  background-color: white;
+  color: black;
+  //Set color variables. These are default. Notice the same variable names in the Theme section starting in line 17. Usage example starting in line 87.
+  --link: blue; 
+  --link-hover: #1E90FF; 
+  --link-visited: #696969;
 }
 
 //Fonts
@@ -11,9 +15,13 @@ $font-default: 'Open Sans', sans-serif;
 //Colors
 //Theme colors
 .theme {
-  &--pink {
-    --primary: #CC2D6F; 
-    --primary-bright: #ff3388; 
+  &--dark {
+    background-color: #222;
+    color: white;
+    //Set color variables. Use the same names as the defaults on lines 7-9.
+    --link: Aquamarine; 
+    --link-hover: violet; 
+    --link-visited: DarkSeaGreen;
   }
 }
 
@@ -43,11 +51,6 @@ $font-default: 'Open Sans', sans-serif;
         li {
           display: inline-block;
           margin-right: .5rem;
-
-          a {
-            //Theming example (pink theme is applied on about-page, navigation links are pink there)
-            color: var(--primary);
-          }
         }
       }
     }
@@ -68,12 +71,29 @@ $font-default: 'Open Sans', sans-serif;
   padding: 0;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 h1 {
   font-size: 2.5rem;
 }
 
 h2 {
   font-size: 1.75rem;
+}
+
+a {
+  color: var(--link);
+
+  &:visited {
+    color: var(--link-visited)
+  }
+
+  &:hover {
+    color: var(--link-hover)
+  }
 }
 
 //Page elements
@@ -83,11 +103,20 @@ h2 {
 
 .box {
   height: 100%;
+  width: 100%;
+  padding: 1rem;
   display: grid;
   align-content: center;
   justify-items: center;
 
   > * {
     margin-bottom: 1rem;
+  }
+
+  &__img {
+    height: 800px;
+    width: 800px;
+    padding: 2rem;
+    background-color: green;
   }
 }

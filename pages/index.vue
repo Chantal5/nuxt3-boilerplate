@@ -1,21 +1,16 @@
 <template>
   <div class="box">
     <h1>Nuxt 3 boilerplate</h1>
-    <p>This Nuxt 3 application is stille empty. You can start here to build your own pages and components.</p>
-
-    <h2 v-if="viewport.isLessThan('tablet')">You can only see me on your mobile device!</h2>
+    <p>This Nuxt 3 application is still empty. You can start here to build your own pages and components. Navigate to the about page to view some examples.</p>
   </div>
 </template>
 
 <script setup>
-  const viewport = useViewport()
+  //Set page specific meta tags for SEO 
+  useSeoMeta({
+    ogTitle: 'Home - Nuxt 3 Boilerplate', //Replace text with your own. This title text is shown when a link to this page is shared on Social Media.
+    description: 'Nuxt 3 Boilerplate homepage', //Replace text with your own. This text is shown in meta description tag in the <head> section of your website.
+    ogDescription: 'Nuxt 3 Boilerplate homepage', //Replace text with your own. This description text is shown when a link to this page is shared on Social Media.
+    ogImage: 'https://dummyimage.com/1200X630/000/fff', //Replace image with your own. This image is shown when a link to this page is shared on Social Media. Best dimension is 1200x630px.
+  })
 </script>
-
-<style lang="scss" scoped>
-  //Use inline styling as little as possible, every vue file with a styling block in it, creates a render blocking css file.
-  //For best performance, use only one stylesheet. An example is located in /assets/css
-  //Scoped styling example. Only content of this file is targeted. You can see the h1 on the about page is still default black.
-  h1 {
-    color: red
-  }
-</style>
