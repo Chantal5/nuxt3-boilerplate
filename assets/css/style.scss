@@ -4,9 +4,9 @@
   background-color: white;
   color: black;
   //Set color variables. These are default. Notice the same variable names in the Theme section starting in line 17. Usage example starting in line 87.
-  --link: blue; 
-  --link-hover: #1E90FF; 
-  --link-visited: #696969;
+  --link: #B63282; 
+  --link-hover: #EA8554; 
+  --link-visited: #B63282;
 }
 
 //Fonts
@@ -19,9 +19,9 @@ $font-default: 'Open Sans', sans-serif;
     background-color: #222;
     color: white;
     //Set color variables. Use the same names as the defaults on lines 7-9.
-    --link: Aquamarine; 
-    --link-hover: violet; 
-    --link-visited: DarkSeaGreen;
+    --link: white; 
+    --link-hover: #3acfd5; 
+    --link-visited: white;
   }
 }
 
@@ -86,6 +86,7 @@ h2 {
 
 a {
   color: var(--link);
+  transition: color .2s ease-in-out;
 
   &:visited {
     color: var(--link-visited)

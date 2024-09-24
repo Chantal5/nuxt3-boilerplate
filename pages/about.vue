@@ -47,11 +47,16 @@
 </script>
 
 <style lang="scss" scoped>
-  //Use inline styling as little as possible, every vue file with a styling block in it, creates a render blocking css file.
+  //Use local styling as little as possible, every vue file with a styling block in it, creates a render blocking css file.
   //For best performance, use only one stylesheet and a CSS system like BEM. An example is located in /assets/css
-  //Scoped styling example. Only content of this file is targeted. You can see the h1 on the homepage is still default black.
+
+  //Local scoped styling example. Only content of this file is targeted. You can see the h1 on the homepage is still default black.
   h1 {
-    color: red;
+    background-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
   }
 
   .viewport-box {
@@ -63,6 +68,7 @@
   }
 
   img {
-    border: 2px solid red;
+    border: 2px solid #02cdd4;
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
   }
 </style>
