@@ -1,5 +1,5 @@
-query Blogpost($slug: String!) {
-  blogpost(where: {slug: $slug}) {
+query Article($slug: String!) {
+  article(where: {slug: $slug}) {
     title
     description
   }
