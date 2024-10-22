@@ -1,5 +1,5 @@
 <template>
   <footer>
-    <span>This Nuxt boilerplate is created by <a href="https://www.linkedin.com/in/chantalsloep/">Chantal Sloep</a>, Nuxt/Vue developer and webdesigner.</span>
+    <span>{{ $t('footer.preLink') }}<a href="https://www.linkedin.com/in/chantalsloep/">Chantal Sloep</a>{{ $t('footer.postLink') }}</span>
   </footer>
-</template>
+</template> 

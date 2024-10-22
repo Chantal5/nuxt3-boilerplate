@@ -1,22 +1,22 @@
 <template>
   <div class="box">
-    <h1>Nuxt 3 boilerplate - About page (dark theme)</h1>
-    <p>This is a second page. Edit it or remove it and make your own.</p>
+    <h1>{{ $t('aboutPage.title') }}</h1>
+    <p>{{ $t('aboutPage.message') }}</p>
 
     <!-- Nuxt Viewport demo -->
-    <h2>Nuxt viewport demo</h2>
-    <p>Open your browsers devtools and look at this page from a mobile view.</p>
-    <div v-if="viewport.isLessThan('tablet')" class="viewport-box">Nuxt Viewport demo. You can only see me on your mobile device!</div>
+    <h2>{{ $t('aboutPage.viewportTitle') }}</h2>
+    <p>{{ $t('aboutPage.viewportMessage') }}</p>
+    <div v-if="viewport.isLessThan('tablet')" class="viewport-box">{{ $t('aboutPage.viewportBox') }}</div>
 
     <!-- Nuxt Image demo -->
-    <h2>Nuxt Image demo</h2>
-    <span>Ordiginal file size: 307kb</span>
+    <h2>{{ $t('aboutPage.imageTitle') }}</h2>
+    <span>{{ $t('aboutPage.imageMessage') }}</span>
     <NuxtImg fit="cover" src="/flowers-portrait.jpg" alt="Nuxt Image demo" height="200" width="800"></NuxtImg>
-    <span>Image 1: NuxtImg with fit=cover, file size: 10.8kb</span>
+    <span>{{ $t('aboutPage.image1Message') }}</span>
     <NuxtImg fit="contain" src="/flowers-portrait.jpg" alt="Nuxt Image demo" height="200" width="800"></NuxtImg>
-    <span>Image 2: NuxtImg with fit=contain, file size: 5.1kb</span>
+    <span>{{ $t('aboutPage.image2Message') }}</span>
     <NuxtImg fit="fill" src="/flowers-portrait.jpg" alt="Nuxt Image demo" height="200" width="800"></NuxtImg>
-    <span>Image 3: NuxtImg with fit=fill, filesize: 13.8kb</span>
+    <span>{{ $t('aboutPage.image3Message') }}</span>
   </div>
 </template>
 
@@ -31,10 +31,6 @@
 
   useHead({
     title: "Blog", //This is the titleChunk, defined in app.vue 
-    //Apply css classes to the body (in this case used as a theme)
-    bodyAttrs: {
-      class: 'theme--dark' 
-    },
   })
 
   //Set page specific meta tags for SEO 

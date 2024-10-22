@@ -1,7 +1,7 @@
 <template>
   <div class="box">
-    <h1>Nuxt 3 boilerplate</h1>
-    <p>This Nuxt 3 application is still empty. You can start here to build your own pages and components. Navigate to the about page to view some examples.</p>
+    <h1>{{ $t('homepage.title') }}</h1>
+    <p>{{ $t('homepage.message') }}</p>
   </div>
 </template>
 

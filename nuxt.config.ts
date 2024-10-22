@@ -2,11 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    'nuxt-viewport', 
-    '@nuxt/image',
-    "nuxt-graphql-request"
-  ],
+  modules: ['nuxt-viewport', '@nuxt/image', "nuxt-graphql-request", '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/color-mode'],
 
   /* Uncomment for GraphQL API data. GraphQL type needs to exist in types/globals.d.ts.
   graphql: {
@@ -68,5 +64,18 @@ export default defineNuxtConfig({
         },
       ]
     }
+  },
+
+  //Languages
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.ts' },
+      { code: 'nl', iso: 'nl-NL', name: 'Nederlands', file: 'nl.ts' }
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+    langDir: 'locales/',
+    lazy: true,
+    vueI18n: './i18n/i18n.config.ts'
   },
 })

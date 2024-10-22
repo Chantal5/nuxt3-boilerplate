@@ -11,7 +11,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/icon": "^1.5.6",
     "@nuxt/image": "^1.8.0",
+    "@nuxtjs/color-mode": "^3.5.1",
+    "@nuxtjs/i18n": "^8.5.5",
     "nuxt": "^3.13.0",
     "nuxt-graphql-request": "^8.1.1",
     "nuxt-viewport": "^2.1.6",

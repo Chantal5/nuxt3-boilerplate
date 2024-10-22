@@ -1,29 +1,12 @@
+@import './variables.scss';
+
 //Theme fallback
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  color: black;
-  //Set color variables. These are default. Notice the same variable names in the Theme section starting in line 17. Usage example starting in line 87.
-  --link: #B63282; 
-  --link-hover: #EA8554; 
-  --link-visited: #B63282;
 }
 
 //Fonts
 $font-default: 'Open Sans', sans-serif;
-
-//Colors
-//Theme colors
-.theme {
-  &--dark {
-    background-color: #222;
-    color: white;
-    //Set color variables. Use the same names as the defaults on lines 7-9.
-    --link: white; 
-    --link-hover: #3acfd5; 
-    --link-visited: white;
-  }
-}
 
 //Screenreader only: hide visually
 .sr-only {
@@ -35,7 +18,13 @@ $font-default: 'Open Sans', sans-serif;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
- }
+}
+
+//set Icon size
+.iconify {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
 //Set Nuxt container
 #__nuxt {
@@ -44,6 +33,10 @@ $font-default: 'Open Sans', sans-serif;
   grid-template-rows: auto 1fr auto;
 
   header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 2rem;
+    align-items: center;
     padding: .5rem 2rem;
 
     nav {
@@ -52,6 +45,18 @@ $font-default: 'Open Sans', sans-serif;
           display: inline-block;
           margin-right: .5rem;
         }
+      }
+    }
+
+    .language-switch {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: center;
+
+      a {
+        display: grid;
+        align-items: center;
       }
     }
   }

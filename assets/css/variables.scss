@@ -1,0 +1,31 @@
+:root {
+  background-color: #fff;
+  color: #000;
+  --link: #B63282; 
+  --link-hover: #EA8554; 
+  --link-visited: #B63282;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #000;
+  --link: #B63282; 
+  --link-hover: #EA8554; 
+  --link-visited: #B63282;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+  --link: white; 
+  --link-hover: #3acfd5; 
+  --link-visited: white;
+}
+
+.sepia-mode {
+  background-color: #fce7a3;
+  color: #000e;
+  --link: #B63282; 
+  --link-hover: #EA8554; 
+  --link-visited: #B63282;
+}
